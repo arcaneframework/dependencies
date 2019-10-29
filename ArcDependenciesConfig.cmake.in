@@ -1,0 +1,5 @@
+set(ArcDependencies_VERSION @ArcDependencies_VERSION@)
+
+@PACKAGE_INIT@
+
+set_and_check(ARCDEPENDENCIES_NUGET_SOURCES_DIR "@PACKAGE_NUGET_SOURCES_DIR@")
