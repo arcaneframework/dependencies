@@ -2,9 +2,16 @@ cmake_minimum_required(VERSION 3.12.0)
 
 project(ArcDependencies LANGUAGES NONE VERSION 1.0.0)
 
-include(GNUInstallDirs)
+# ----------------------------------------------------------------------------
+# Positionne les répertoires standards d'installation
 
-set(config_install_dir "${CMAKE_INSTALL_LIBDIR}/cmake")
+find_package(Arccon REQUIRED)
+list(APPEND CMAKE_MODULE_PATH ${ARCCON_MODULE_PATH})
+include(ArcconSetInstallDirs)
+
+# ----------------------------------------------------------------------------
+
+set(config_install_dir "${CMAKE_INSTALL_DATAROOTDIR}/cmake/${PROJECT_NAME}")
 set(dependencies_install_root "${CMAKE_INSTALL_DATADIR}")
 set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
