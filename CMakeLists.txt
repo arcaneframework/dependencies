@@ -15,7 +15,7 @@ set(config_install_dir "${CMAKE_INSTALL_DATAROOTDIR}/cmake/${PROJECT_NAME}")
 set(dependencies_install_root "${CMAKE_INSTALL_DATADIR}")
 set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
-install(DIRECTORY nuget_fallback DESTINATION ${dependencies_install_root})
+arccon_install_directory(NAMES nuget_fallback DESTINATION ${dependencies_install_root})
 set(NUGET_SOURCES_DIR "${dependencies_install_root}/nuget_fallback")
 set(ARCDEPENDENCIES_NUGET_SOURCES_DIR "${CMAKE_CURRENT_SOURCE_DIR}/nuget_fallback" CACHE FILEPATH "Source of nuget packages" FORCE)
 
