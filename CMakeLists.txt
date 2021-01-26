@@ -7,6 +7,7 @@ project(ArcDependencies LANGUAGES NONE VERSION 1.0.0)
 
 find_package(Arccon REQUIRED)
 list(APPEND CMAKE_MODULE_PATH ${ARCCON_MODULE_PATH})
+include(${ARCCON_CMAKE_COMMANDS})
 include(ArcconSetInstallDirs)
 
 # ----------------------------------------------------------------------------
