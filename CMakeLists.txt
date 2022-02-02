@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.12.0)
 
-project(ArcDependencies LANGUAGES NONE VERSION 1.1.0)
+file(READ "version" ARCDEPENDENCIES_VERSION)
+message(STATUS "ArcDependencies Version = ${ARCDEPENDENCIES_VERSION}")
+
+project(ArcDependencies
+  LANGUAGES NONE
+  VERSION ${ARCDEPENDENCIES_VERSION})
 
 # ----------------------------------------------------------------------------
 # Positionne les répertoires standards d'installation
@@ -35,6 +40,8 @@ configure_package_config_file(ArcDependenciesConfig.cmake.in ${project_config}
 write_basic_package_version_file(
   ${project_config_version}
   VERSION ${ArcDependencies_VERSION}
-  COMPATIBILITY SameMajorVersion)
+  COMPATIBILITY SameMinorVersion)
 install(FILES ${project_config_version} ${project_config}
         DESTINATION ${config_install_dir} )
+
+set(ArcDependencies_VERSION "${ArcDependencies_VERSION}" CACHE STRING "ArcDependencies version" FORCE)
