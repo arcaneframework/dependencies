@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12.0)
 
-project(ArcDependencies LANGUAGES NONE VERSION 1.0.0)
+project(ArcDependencies LANGUAGES NONE VERSION 1.1.0)
 
 # ----------------------------------------------------------------------------
 # Positionne les répertoires standards d'installation
