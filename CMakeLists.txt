@@ -17,7 +17,7 @@ include(ArcconSetInstallDirs)
 
 # ----------------------------------------------------------------------------
 
-set(config_install_dir "${CMAKE_INSTALL_DATAROOTDIR}/cmake/${PROJECT_NAME}")
+set(config_install_dir "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}")
 set(dependencies_install_root "${CMAKE_INSTALL_DATADIR}")
 set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
