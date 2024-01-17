@@ -40,7 +40,7 @@ configure_package_config_file(ArcDependenciesConfig.cmake.in ${project_config}
 write_basic_package_version_file(
   ${project_config_version}
   VERSION ${ArcDependencies_VERSION}
-  COMPATIBILITY SameMinorVersion)
+  COMPATIBILITY SameMajorVersion)
 install(FILES ${project_config_version} ${project_config}
         DESTINATION ${config_install_dir} )
 
